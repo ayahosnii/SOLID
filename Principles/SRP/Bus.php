@@ -97,7 +97,7 @@ class Bus
      */
     public function getMaximumSpeed(): int
     {
-        return $this->maximumSpeed . 'K\h';
+        return $this->maximumSpeed;
     }
 
     /**

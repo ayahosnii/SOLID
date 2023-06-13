@@ -1,8 +1,12 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
-use SOLID\SRP\Bus;
-use SOLID\SRP\Driver;
-use SOLID\SRP\Route;
+
+use SOLID\OCP\Car;
+use SOLID\OCP\MovingOnTheRoads;
+use SOLID\OCP\Trip;
+use SOLID\OCP\Bus;
+use SOLID\OCP\Driver;
+use SOLID\OCP\Route;
 
 require_once __DIR__ . DS . 'vendor' . DS . 'autoload.php';
 
@@ -17,8 +21,10 @@ $bus->setColor('red');
 $bus->setDoors(2);
 $bus->setMaximumSpeed(200);
 
-$bus->addRoute($route80);
-$bus->addRoute($route90);
-echo $bus->move();
+//$bus->addRoute($route80);
+//$bus->addRoute($route90);
+echo '<pre>';
+$bus->setMovable(new MovingOnTheRoads());
 
-var_dump($bus);
+$trip = new Trip($bus, 'R230', '60', '120');
+echo $trip->move();
