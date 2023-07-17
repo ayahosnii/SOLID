@@ -1,15 +1,16 @@
 <?php
+namespace SOLID\LSP;
 
 class Rectangle
 {
     /**
      * @var int
      */
-    private $width;
+    protected $width;
     /**
      * @var int
      */
-    private $height;
+    protected $height;
 
 
     /**
