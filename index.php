@@ -23,3 +23,12 @@ function f (Rectangle $rect)
 }
 
 f($rectangle);
+
+$violation = new \SOLID\LSP\LSPViolationSubType();
+$violation->setSalary(2000);
+$violationExample = new \SOLID\LSP\LSPViolation();
+echo $violationExample->calculateSalaryOfEmployee($violation, 16);
+
+$encrypt= new \SOLID\LSP\EncryptSubType();
+$encrypt->setString('AyaHosny');
+echo $encrypt->encryptString();
